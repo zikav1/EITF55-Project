@@ -5,7 +5,7 @@ class RabinMiller:
     def __init__(self) -> None:
         pass
     
-    def is_prime(self, n):
+    def is_prime(self, n, a):
         if n % 2 == 0 or n < 3:
             return False
     
@@ -16,7 +16,7 @@ class RabinMiller:
             s //= 2
 
 
-        a = random.randint(2, n - 2)
+        # a = random.randint(2, n - 2)
 
         x = pow(a,s,n)
 
@@ -39,7 +39,9 @@ class RabinMiller:
 
 
 rabin_miller = RabinMiller()
-print(rabin_miller.is_prime(14))
+n = 13
+a = random.randint(2, n - 2)
+print(rabin_miller.is_prime(n, a))
 
     
 
