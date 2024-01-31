@@ -36,12 +36,22 @@ class RabinMiller:
         return True
     
     
+    def testRM(self, n):
+        s = set()
+        while len(s)<20:
+            a = random.randint(2,n-2)
+            s.add(a)
+        print(s)
+        
+        for x in s:
+            print("for a:", x,"->", self.is_prime(n, x))
 
 
 rabin_miller = RabinMiller()
-n = 13
-a = random.randint(2, n - 2)
-print(rabin_miller.is_prime(n, a))
+# n = 13
+# a = random.randint(2, n - 2)
+# print(rabin_miller.is_prime(n, a))
+rabin_miller.testRM(54)
 
     
 
