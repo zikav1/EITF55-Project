@@ -1,4 +1,5 @@
 import random
+import time
 
 class RabinMiller:
 
@@ -16,32 +17,27 @@ class RabinMiller:
             s //= 2
 
 
-        # a = random.randint(2, n - 2)
-
         x = pow(a,s,n)
-
-
         if x == 1 or x == n - 1:
-            return True
+            return 'ProbablyPrime'
         
-        for _ in range(r-1):
-            x = pow(x,2,n)
+        for j in range(1,r):
+            #x = pow(x,2,n)
+            x = pow(a, pow(2, j) * s, n)
             if x == 1:
-                return False
+                return 'Composite'
             if x == n - 1:
-                break
-        else:
-            return False
+                return 'ProbablyPrime' 
         
-        return True
+        
+        return 'Composite'
     
     
     def testRM(self, n):
         s = set()
-        while len(s)<20:
+        while len(s) < 20:
             a = random.randint(2,n-2)
             s.add(a)
-        print(s)
         
         for x in s:
             print("for a:", x,"->", self.is_prime(n, x))
@@ -50,8 +46,8 @@ class RabinMiller:
 rabin_miller = RabinMiller()
 # n = 13
 # a = random.randint(2, n - 2)
-# print(rabin_miller.is_prime(n, a))
-rabin_miller.testRM(54)
+print(rabin_miller.testRM(465721))
+
 
     
 
