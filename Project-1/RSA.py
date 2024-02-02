@@ -1,15 +1,21 @@
 from RabinMiller import RabinMiller
 
-
-
-file_path = '512.txt'
-
 def generate_primes(file_path):
     with open(file_path, 'r') as file:
-        line = file.readline()
-        while line:
-            print(int(line.strip()).bit_length())
-            line = file.readline()
+        p = int(file.readline().strip())
+        q = int(file.readline().strip())
+    
+    return (p, q)
+
+
+p, q = generate_primes('512.txt') # our p and q
+N = p * q #N value
+
+
+
+
+
+
         
 
         
