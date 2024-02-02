@@ -17,10 +17,8 @@ def write_to_file(numbers, filename):
             file.write(str(number) + '\n')
 
 rm = RabinMiller()
-generated_numbers = generate_bits(512, rm)
-print(generate_bits(512, rm))
-
-write_to_file(generated_numbers, '512bits.txt')
+generated_numbers = generate_bits(2048, rm)
+write_to_file(generated_numbers, '2048.txt')
 
 
 
