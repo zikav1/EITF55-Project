@@ -9,17 +9,30 @@ def generate_primes(file_path):
     return (p, q)
 
 
-# Objects used
-rm = RabinMiller()
+
+
 eu = Euclidean()
-
-
-
 p, q = generate_primes('512.txt') # our p and q
 
-N = p * q #N value
+N = p * q
 phi_n = (p - 1)*(q - 1)
 e = (2**16) + 1
+d = eu.inverse_mod(e, phi_n)
+
+print(f'D-value: {d}')
+
+
+s = 1312
+print(f'Original value: {s}')
+
+c = pow(s,e, N)
+print(f'Crypted: {c}')
+
+z = pow(c,d,N) 
+#print(f'Decrypted: {z}')
+
+
+
 
 
 

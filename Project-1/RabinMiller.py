@@ -3,9 +3,6 @@ import time
 
 class RabinMiller:
 
-    def __init__(self) -> None:
-        pass
-    
     def is_prime(self, n):
         if n % 2 == 0 or n < 3:
             return False
@@ -18,6 +15,7 @@ class RabinMiller:
 
         a = random.randint(2, n - 2)
         x = pow(a, s, n)
+        print(a)
 
         if x == 1 or x == n - 1:
             return True
@@ -30,16 +28,7 @@ class RabinMiller:
             if x == n - 1:
                 return True 
         return False
-    
-    
-    def testRM(self, n):
-        s = set()
-        while len(s) < 20:
-            a = random.randint(2, n - 2)
-            s.add(a)
-        
-        for x in s:
-            print("for a:", x,"->", self.is_prime(n, x))
+
 
         
         
@@ -47,6 +36,12 @@ class RabinMiller:
 
 
 rabin_miller = RabinMiller()
+
+
+with open('RabinMillerTest.txt', 'w') as file:
+    for _ in range(20):
+        file.write(str(rabin_miller.is_prime(131)) + '\n')
+
 
 
 
