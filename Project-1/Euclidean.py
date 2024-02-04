@@ -46,7 +46,7 @@ with open('EuclideanResult.txt', 'w') as file:
         result = euclidean.inverse_mod(a, m)
         
         # Write the formatted output to the file
-        file.write(f'For a: {a}\nand m: {m}\nThe inverse mod is: {result}\n{"-" * 20}\n')
+        file.write(f'For a: {a}\n and m: {m}\nThe inverse mod is: {result}\n{"-" * 20}\n')
 
 
 

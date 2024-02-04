@@ -1,5 +1,5 @@
 from RabinMiller import RabinMiller
-import math
+from Euclidean import Euclidean
 
 def generate_primes(file_path):
     with open(file_path, 'r') as file:
@@ -9,8 +9,19 @@ def generate_primes(file_path):
     return (p, q)
 
 
+# Objects used
+rm = RabinMiller()
+eu = Euclidean()
+
+
+
 p, q = generate_primes('512.txt') # our p and q
 N = p * q
+phi_n = (p - 1)(q - 1)
+e = (2**16) + 1
+
+
+
 
 
 
