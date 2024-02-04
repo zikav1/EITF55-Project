@@ -16,7 +16,6 @@ class RabinMiller:
             r += 1
             s //= 2
 
-
         a = random.randint(2, n - 2)
         x = pow(a, s, n)
 
@@ -48,8 +47,7 @@ class RabinMiller:
 
 
 rabin_miller = RabinMiller()
-num = 10385842772589801829890803876610844759866292432913271511358770306309803564188411047352573586940956550709545615601942930724505122340564707242580241942919035
-print(num.bit_length())
+
 
 
 

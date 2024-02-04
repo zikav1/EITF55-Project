@@ -1,4 +1,5 @@
 from RabinMiller import RabinMiller
+from Euclidean import Euclidean
 
 def generate_primes(file_path):
     with open(file_path, 'r') as file:
@@ -6,6 +7,12 @@ def generate_primes(file_path):
         q = int(file.readline().strip())
     
     return (p, q)
+
+
+# Objects used
+rm = RabinMiller()
+eu = Euclidean()
+
 
 
 p, q = generate_primes('512.txt') # our p and q
