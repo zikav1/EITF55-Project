@@ -9,7 +9,10 @@ def generate_primes(file_path):
 
 
 p, q = generate_primes('512.txt') # our p and q
+
 N = p * q #N value
+phi_n = (p - 1)*(q - 1)
+e = (2**16) + 1
 
 
 

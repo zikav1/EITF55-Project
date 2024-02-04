@@ -9,7 +9,7 @@ class RabinMiller:
     def is_prime(self, n):
         if n % 2 == 0 or n < 3:
             return False
-    
+        
         r, s = 0, n - 1
 
         while s % 2 == 0:
@@ -30,9 +30,7 @@ class RabinMiller:
                 return False
             if x == n - 1:
                 return True 
-        
-
-        return True
+        return False
     
     
     def testRM(self, n):
