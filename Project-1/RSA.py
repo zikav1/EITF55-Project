@@ -1,4 +1,5 @@
 from RabinMiller import RabinMiller
+import math
 
 def generate_primes(file_path):
     with open(file_path, 'r') as file:
@@ -9,8 +10,7 @@ def generate_primes(file_path):
 
 
 p, q = generate_primes('512.txt') # our p and q
-N = p * q #N value
-
+N = p * q
 
 
 

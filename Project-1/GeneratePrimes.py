@@ -6,7 +6,7 @@ def generate_bits(num, rm):
     s = set()
     start_time = time.time()
 
-    while len(s) < 30:
+    while len(s) < 100:
         big_int = random.randrange(2**(num-1), 2**num)
         if rm.is_prime(big_int):
             s.add(big_int)
@@ -19,6 +19,7 @@ def write_to_file(numbers, filename):
     with open(filename, 'w') as file:
         for number in numbers:
             file.write(str(number) + '\n')
+
 
 rm = RabinMiller()
 generated_numbers = generate_bits(4096, rm)
