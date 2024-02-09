@@ -37,11 +37,3 @@ rabin_miller = RabinMiller()
 with open('RabinMillerTest.txt', 'w') as file:
     for _ in range(20):
         file.write(str(rabin_miller.is_prime(131)) + '\n')
-
-
-
-
-
-
-    
-

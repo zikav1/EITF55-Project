@@ -27,9 +27,3 @@ def write_to_file(numbers, filename):
 rm = RabinMiller()
 generated_numbers = generate_bits(512, rm)
 write_to_file(generated_numbers, '512.txt')
-
-
-
-
-
-
